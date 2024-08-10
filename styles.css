@@ -1,0 +1,36 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 15vh minmax(max-content, 85vh);
+}
+
+#header {
+    background-color: cornflowerblue;
+    z-index: 2;
+    box-shadow: 0px 15px 10px -15px #111; 
+    grid-column: 1 / 4;
+    padding: 15px;
+}
+
+#left-column, #right-column {
+    background-color: whitesmoke;
+}
+
+#middle-column {
+    z-index: 1;
+    background-color: rgb(235, 246, 255);
+    box-shadow: -15px 0px 25px -15px #111, 15px 0px 25px -15px #111;  
+}
+
+.btn {
+    background-color: transparent;
+    padding: 5px;
+}
