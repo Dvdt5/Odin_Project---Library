@@ -8,10 +8,40 @@
 </head>
 <body>
     <main>
+        <div id="popup-modal">
+            <form id="popup-form" action="">
+                <div class="input-row">
+                    <label for="title-input">Title</label><br>
+                    <input type="text" name="title" id="title-input" class="input" placeholder="Title of the book" required>
+                </div>
+                <div class="input-row">
+                    <label for="author-input">Author</label><br>
+                    <input type="text" name="author" id="author-input" class="input" placeholder="Author of the book" required>
+                </div>
+                <div class="input-row">
+                    <label for="pagenumber-input">Page Number</label><br>
+                    <input type="number" name="pagenumber" id="pagenumber-input" class="input" min="0" placeholder="Amount of pages" required>
+                </div>
+                <div class="input-row" id="radio-input-row">
+                    <div>
+                        <label for="readed-radio-btn">READED</label>
+                        <input type="radio" name="isreaded" class="radio-input" id="readed-radio-btn" value="readed" required>
+                    </div>
+                    <div>
+                        <label for="notread-radio-btn">NOT READED</label>
+                        <input type="radio" name="isreaded" class="radio-input" id="notread-radio-btn" value="notreaded">
+                    </div>
+                </div>
+                <button type="button" class="btn">CLOSE</button>
+                <button type="reset" class="btn">RESET</button>
+                <button type="submit" class="btn">SUBMIT</button>
+            </form>
+        </div>
         <div id="header">
-            <button type="button" class="btn">
-                ADD BOOK
-            </button></div>
+            <div><button type="button" class="btn" id="add-book-btn">ADD BOOK</button></div>
+            <h1 style="color: white;">Library Project</h1>
+            <div><p style="color: red; text-shadow: 0 0 5px black; font-size: large;">Made by <span style="color: white;">Davut Dagtekin</span></p></div>
+        </div>
         <div id="left-column"></div>
         <div id="middle-column"></div>
         <div id="right-column"></div>
