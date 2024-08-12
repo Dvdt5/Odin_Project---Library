@@ -8,6 +8,7 @@
 </head>
 <body>
     <main>
+        <div id="shade"></div>
         <div id="popup-modal">
             <form id="popup-form" action="">
                 <div class="input-row">
@@ -22,19 +23,15 @@
                     <label for="pagenumber-input">Page Number</label><br>
                     <input type="number" name="pagenumber" id="pagenumber-input" class="input" min="0" placeholder="Amount of pages" required>
                 </div>
-                <div class="input-row" id="radio-input-row">
+                <div class="input-row" >
                     <div>
-                        <label for="readed-radio-btn">READED</label>
-                        <input type="radio" name="isreaded" class="radio-input" id="readed-radio-btn" value="readed" required>
-                    </div>
-                    <div>
-                        <label for="notread-radio-btn">NOT READED</label>
-                        <input type="radio" name="isreaded" class="radio-input" id="notread-radio-btn" value="notreaded">
+                        <label for="readed-checkbox-btn">READED</label>
+                        <input type="checkbox" name="readed" class="checkbox-input" id="readed-checkbox-btn" checked value="readed">
                     </div>
                 </div>
-                <button type="button" class="btn">CLOSE</button>
+                <button type="button" class="btn" id="close-form-btn">CLOSE</button>
                 <button type="reset" class="btn">RESET</button>
-                <button type="submit" class="btn">SUBMIT</button>
+                <button type="button" class="btn" id="confirm-form-btn">ADD BOOK</button>
             </form>
         </div>
         <div id="header">

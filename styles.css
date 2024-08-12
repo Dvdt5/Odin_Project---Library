@@ -42,7 +42,8 @@ main {
     left: 40vw;
     top: 30vh;
     width: 20vw;
-    height: 50vh;
+    height: fit-content;
+    min-width: max-content;
     background-color: darkblue;
     border: 5px solid white;
     box-sizing: border-box;
@@ -56,12 +57,7 @@ main {
     text-align: center;
 }
 
-#radio-input-row {
-    display: flex;
-    justify-content: space-around;
-}
 
-/*
 #shade {
     background-color: rgba(100,100,100,0.5);
     width: 100vw;
@@ -69,7 +65,7 @@ main {
     position: fixed;
     z-index: 9;
 }
-*/
+
 
 .btn {
     background-color: white;
@@ -81,6 +77,6 @@ main {
     padding: 5px;
 }
 
-.radio-input {
-    accent-color: white;
+.checkbox-input {
+    accent-color: blue;
 }
