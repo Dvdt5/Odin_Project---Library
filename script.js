@@ -1,7 +1,8 @@
 //Assign Buttons
 const addBookBtn = document.getElementById("add-book-btn");
 const closeFormBtn = document.getElementById("close-form-btn");
-const confirmFormBtn = document.getElementById("confirm-form-btn")
+const confirmFormBtn = document.getElementById("confirm-form-btn");
+const toggleReadedStatusBtn = document.querySelectorAll(".toggle-readed-btn");
 
 //Assign Elements
 const addBookForm = document.getElementById("popup-modal");
@@ -29,8 +30,27 @@ addBookBtn.addEventListener("click", ()=>{
 });
 
 closeFormBtn.addEventListener("click", ()=>{
-    clearInputValues;
+    clearInputValues();
     addBookForm.style.display = "none";
     modalShade.style.display = "none"
     addBookBtn.style.pointerEvents = "all";
 });
+
+toggleReadedStatusBtn.forEach(function(button) {
+    button.addEventListener("click", ()=>{
+        if (button.classList.contains("readed")){
+            button.classList.remove("readed");
+            button.classList.add("notreaded");
+            button.textContent = "NOT READED";
+            button.nextElementSibling.style.borderLeft = "red 12.5px solid";
+            button.nextElementSibling.style.borderRight = "red 12.5px solid";
+        } else {
+            button.classList.remove("notreaded");
+            button.classList.add("readed");
+            button.textContent = "READED";
+            button.nextElementSibling.style.borderLeft = "greenyellow 12.5px solid";
+            button.nextElementSibling.style.borderRight = "greenyellow 12.5px solid";
+        }
+        
+    });
+  });
