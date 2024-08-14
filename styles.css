@@ -167,3 +167,9 @@ main {
     border-left: 12.5px solid greenyellow;
     border-right: 12.5px solid greenyellow;
 }
+
+
+.triangle-notreaded {
+    border-left: 12.5px solid red;
+    border-right: 12.5px solid red;
+}

@@ -13,25 +13,25 @@
             <form id="popup-form" action="">
                 <div class="input-row">
                     <label for="title-input">Title</label><br>
-                    <input type="text" name="title" id="title-input" class="input" placeholder="Title of the book" required maxlength="40">
+                    <input type="text" name="title" id="title-input" class="input" placeholder="Title of the book" required maxlength="40" autocomplete="off">
                 </div>
                 <div class="input-row">
                     <label for="author-input">Author</label><br>
-                    <input type="text" name="author" id="author-input" class="input" placeholder="Author of the book" required maxlength="24">
+                    <input type="text" name="author" id="author-input" class="input" placeholder="Author of the book" required maxlength="24" autocomplete="off">
                 </div>
                 <div class="input-row">
                     <label for="pagenumber-input">Page Number</label><br>
-                    <input type="number" name="pagenumber" id="pagenumber-input" class="input" min="0" placeholder="Amount of pages" required>
+                    <input type="number" name="pagenumber" id="pagenumber-input" class="input" min="0" placeholder="Amount of pages" required autocomplete="off">
                 </div>
                 <div class="input-row" >
                     <div>
                         <label for="readed-checkbox-btn">READED</label>
-                        <input type="checkbox" name="readed" class="checkbox-input" id="readed-checkbox-btn" checked value="readed">
+                        <input type="checkbox" name="readed" class="checkbox-input" id="readed-checkbox-btn">
                     </div>
                 </div>
                 <button type="button" class="btn" id="close-form-btn">CLOSE</button>
                 <button type="reset" class="btn">RESET</button>
-                <button type="button" class="btn" id="confirm-form-btn">ADD BOOK</button>
+                <button type="submit" class="btn" id="confirm-form-btn">ADD BOOK</button>
             </form>
         </div>
         <div id="header">
@@ -41,42 +41,7 @@
         </div>
         <div id="left-column"></div>
         <div id="middle-column">
-            <div class="book-tile">
-                <p class="book-title">sssssssss sssssssssss ssssssss sssssssss</p>
-                <p class="book-author">ssss ssssss ssssss sssss</p>
-                <p class="book-pagenumber">246</p>
-                <div>
-                    <button type="button" class="readed toggle-readed-btn">READED</button>
-                    <div class="triangle"></div>
-                </div>
-            </div>
-            <div class="book-tile">
-                <p class="book-title">sssssssss sssssssssss ssssssss sssssssss</p>
-                <p class="book-author">ssss ssssss ssssss sssss</p>
-                <p class="book-pagenumber">246</p>
-                <div>
-                    <button type="button" class="readed toggle-readed-btn">READED</button>
-                    <div class="triangle"></div>
-                </div>
-            </div>
-            <div class="book-tile">
-                <p class="book-title">sssssssss sssssssssss ssssssss sssssssss</p>
-                <p class="book-author">ssss ssssss ssssss sssss</p>
-                <p class="book-pagenumber">246</p>
-                <div>
-                    <button type="button" class="readed toggle-readed-btn">READED</button>
-                    <div class="triangle"></div>
-                </div>
-            </div>
-            <div class="book-tile">
-                <p class="book-title">sssssssss sssssssssss ssssssss sssssssss</p>
-                <p class="book-author">ssss ssssss ssssss sssss</p>
-                <p class="book-pagenumber">246</p>
-                <div>
-                    <button type="button" class="readed toggle-readed-btn">READED</button>
-                    <div class="triangle"></div>
-                </div>
-            </div>
+            
         </div>
         <div id="right-column"></div>
     </main>
