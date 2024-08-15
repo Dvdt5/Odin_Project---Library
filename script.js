@@ -20,24 +20,28 @@ const bookReadInput = document.getElementById("readed-checkbox-btn");
 //Books will be stored here
 let listOfBooks = [
     {
+        id: "1",
         title: "Hunger Games",
         author: "SUzanne Collins",
         pageNumber: "384",
         isReaded: true
     },
     {
+        id: "2",
         title: "Lord of the Flies",
         author: "William Golding",
         pageNumber: "225",
         isReaded: true
     },
     {
+        id: "3",
         title: "Harry Potter and the Philosopher's Stone",
         author: "J. K. Rowling",
         pageNumber: "342",
         isReaded: false
     },
     {
+        id: "4",
         title: "Great Expectations",
         author: "Charles Dickens",
         pageNumber: "640",
@@ -72,8 +76,14 @@ const addReadedButton = () => {
       });
 };
 
+const deleteBook = (idOfBook) => {
+    listOfBooks = listOfBooks.filter((book)=> book.id != idOfBook);
+    displayBooks();
+};
+
 const addBook = () => {
     listOfBooks.push({
+        id: `${Date.now()}`,
         title: bookTitleInput.value,
         author: bookAuthorInput.value,
         pageNumber: bookNumberInput.value,
@@ -84,7 +94,7 @@ const addBook = () => {
 
 const displayBooks = () => {
     bookContainer.innerHTML = "";
-    listOfBooks.map(({title,author,pageNumber,isReaded})=>{
+    listOfBooks.map(({id,title,author,pageNumber,isReaded})=>{
         bookContainer.innerHTML += `
          <div class="book-tile">
             <p class="book-title">${title}</p>
@@ -94,13 +104,11 @@ const displayBooks = () => {
                 <button type="button" class="${isReaded ? "readed": "notreaded"} toggle-readed-btn">${isReaded ? "READED": "NOTREADED"}</button>
                 <div class="triangle ${isReaded ? "" : "triangle-notreaded"}"></div>
             </div>
+            <div class="delete-book-btn" onClick="deleteBook(${id})"><abbr title="DELETE BOOK">D</abbr></div>
         </div>`;
     })
-    
     addReadedButton();
 };
-
-
 
 
 addBookBtn.addEventListener("click", ()=>{

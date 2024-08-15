@@ -173,3 +173,21 @@ main {
     border-left: 12.5px solid red;
     border-right: 12.5px solid red;
 }
+
+.delete-book-btn {
+    color: white;
+    background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100xp;
+    height: 20px;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.delete-book-btn abbr {
+    border: none;
+    text-decoration: none;
+}
